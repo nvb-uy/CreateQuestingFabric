@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "create_questing",
+	"version": "${version}",
+	"name": "Create Questing",
+	"description": "Create theme for FTB Quests, can be used per chapter or globally. Highly customizable.",
+	"authors": [
+		"ElocinDev"
+	],
+	"contact": {
+		"sources": "https://github.com/nvb-uy/Create_Questing-FABRIC"
+	},
+	"license": "AGNYA License",
+	"icon": "assets/create_questing/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"elocindev.create_questing.fabric.CreateQuesting"
+		]
+	},
+	"mixins": [
+		"create_questing.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "*",
+		"java": ">=17",
+		"fabric-api": "*",
+		"ftbquests": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

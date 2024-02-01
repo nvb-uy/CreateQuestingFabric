@@ -1,0 +1,11 @@
+{
+	"required": false,
+	"package": "elocindev.create_questing.fabric.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"QuestScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
