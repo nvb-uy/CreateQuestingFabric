@@ -24,13 +24,15 @@ public class CreateQuesting implements ModInitializer {
 		// TODO: Uhh probably redo the whole mod or most parts of it, I made this in 20 minutes and it's not very good
 
 		NecConfigAPI.registerConfig(ConfigEntries.class);
-
         Config = ConfigEntries.INSTANCE;
-        ThemeSetup.setup();
+
+		if (FabricLoader.getInstance().isModLoaded("ftbquests"))
+        	ThemeSetup.setup();
 
 		LOGGER.info("Loaded Create Questing Config");
 		ResourceBuilderAPI.registerBuiltinPack(FabricLoader.getInstance(), MODID, "quest_shapes", Component.literal("Adds create-like quest shapes"), false, false);
-
-		ItemRegistry.register();
+		
+		if (FabricLoader.getInstance().isModLoaded("ftbquests"))
+			ItemRegistry.register();
 	}
 }
